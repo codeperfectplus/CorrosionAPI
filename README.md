@@ -32,3 +32,6 @@ http://localhost:8000/docs
 4. Get Result
 
 
+# example
+
+![Rusted metal](uploads/sample.jpeg)
