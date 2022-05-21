@@ -15,11 +15,13 @@ from PIL import Image
 from object_detection.utils import label_map_util
 from object_detection.utils import visualization_utils as vis_util
 
+root_dir = os.path.dirname(os.path.abspath(__file__))
+
 # Path to frozen detection graph. This is the actual model that is used for the object detection.
-PATH_TO_CKPT = "fine_tuned_model/frozen_inference_graph.pb"
+PATH_TO_CKPT = os.path.join(root_dir, "fine_tuned_model/frozen_inference_graph.pb")
 
 # List of the strings that is used to add correct label for each box.
-PATH_TO_LABELS = "fine_tuned_model/label_map.pbtxt"
+PATH_TO_LABELS = os.path.join(root_dir, "fine_tuned_model/label_map.pbtxt")
 
 # Number of classes to detect
 NUM_CLASSES = 1
