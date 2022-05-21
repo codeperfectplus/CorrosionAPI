@@ -51,6 +51,7 @@ async def boundingbox_faster_RCNN_POST(image: UploadFile = File(None, media_type
     if image.content_type == 'image/jpeg':
         filename = image.filename
         image_path = joinpath(UPLOADS_DIR, filename)
+
         with open(image_path, 'wb') as buffer:           
             shutil.copyfileobj(image.file, buffer)
         
